@@ -11,5 +11,19 @@
 ### 8..Find the products that consistently fall within the bottom 10% of profit margins.
 ### 9..Analyze customer segmentation by determining which customers (grouped by quantity purchased and total profit) should be targeted for loyalty programs.
 
-##OVERVIEW
+## OVERVIEW
 ### 1..Which country generated the highest profit for each roast type?
+/*(with this query i learned, we can't use ranking column with where or having coditions. so we must use CTE, then we need to perform conditions)*/
+
+''' SQL
+with temp as(
+	select c.country, p.roast_type, round(sum(p.profit)) as profits,
+	rank() over(partition by(p.roast_type) order by sum(p.profit) desc) as ranking
+	from customers as c
+	join product_orders as p on c.customer_id = p.customer_id
+	group by 1,2
+    order by profits desc
+)
+select country, roast_type, profits from temp
+where ranking=1;
+'''
