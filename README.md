@@ -129,8 +129,8 @@ join product_orders as p on c.customer_id = p.customer_id
 group by 1,2
 order by 3 desc;
 ```
-## DASHBOARD
-![DASHBOARD]()
+## ACTIONABLE INSIGHTS-DASHBOARD
+![DASHBOARD](https://github.com/Srinathp712/SQL_project/blob/main/Excel_Dashboard.png)
 
 ## CONCLUSION
 ### The coffee sales analysis revealed that the USA generated the highest profits for Dark Roast, making it the top-performing region for this type, while Canada excelled in Light Roast, indicating potential for growth in that segment. Espresso emerged as the most popular coffee type overall, driving the highest sales volumes across regions. Seasonal trends showed peak sales in Q4, emphasizing the importance of stocking inventory before the holiday season. "By leveraging regional preferences and implementing targeted marketing strategies, the client can enhance profits and improve customer satisfaction".
