@@ -11,7 +11,7 @@
 ### 8..Find the products that consistently fall within the bottom 10% of profit margins.
 ### 9..Analyze customer segmentation by determining which customers (grouped by quantity purchased and total profit) should be targeted for loyalty programs.
 
-## OVERVIEW
+## QUERIES
 ### 1..Which country generated the highest profit for each roast type?
 /*(with this query i learned, we can't use ranking column with where or having coditions. so we must use CTE, then we need to perform conditions)*/
 
@@ -130,3 +130,5 @@ group by 1,2
 order by 3 desc;
 ```
 
+## CONCLUSION
+### The coffee sales analysis revealed that the USA generated the highest profits for Dark Roast, making it the top-performing region for this type, while Canada excelled in Light Roast, indicating potential for growth in that segment. Espresso emerged as the most popular coffee type overall, driving the highest sales volumes across regions. Seasonal trends showed peak sales in Q4, emphasizing the importance of stocking inventory before the holiday season. "By leveraging regional preferences and implementing targeted marketing strategies, the client can enhance profits and improve customer satisfaction".
